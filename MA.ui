@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MAClass</class>
+ <widget class="QMainWindow" name="MAClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1386</width>
+    <height>775</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MA</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,0,0,0,3">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QGraphicsView" name="graphicsView_2"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>反色处理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>256 -&gt; 32</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>中值滤波</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>均值滤波</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>八边形距离变换</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="text">
+         <string>曼哈顿距离变换</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="text">
+         <string>欧式距离变换(13*13)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="text">
+         <string>欧式距离变换(5*5)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="text">
+         <string>棋盘距离变换</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_10">
+        <property name="text">
+         <string>障碍欧式距离变换</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="text">
+         <string>八边形距离变换32bit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="text">
+         <string>生成Voronoi图（分配场）</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="text">
+         <string>缓冲区提取（距离场）</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_15">
+        <property name="text">
+         <string>加壳变换（距离场）</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="text">
+         <string>蜕皮变换（距离场）</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="text">
+         <string>粘连变换</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="text">
+         <string>蚀断变换</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="text">
+         <string>提取三角网</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QGraphicsView" name="graphicsView"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1386</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuimage">
+    <property name="title">
+     <string>open</string>
+    </property>
+    <addaction name="actionopen"/>
+   </widget>
+   <addaction name="menuimage"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionopen">
+   <property name="text">
+    <string>bmp</string>
+   </property>
+  </action>
+  <action name="action32_bmp">
+   <property name="text">
+    <string>32 bmp</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MA.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>bmpInverse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>695</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>bmp256To32()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>693</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>543</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>averageFilter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>648</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>midFilter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>709</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>562</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>distanceTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>724</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>729</x>
+     <y>669</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>distanceTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>760</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>distanceTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>701</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>565</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>distanceTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>698</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>655</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>distanceTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>708</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>686</x>
+     <y>713</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>barrierTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>754</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>730</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>getVoronoi()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>712</x>
+     <y>745</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>getBuffer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>604</x>
+     <y>686</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>getDelauney()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>703</x>
+     <y>708</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>699</x>
+     <y>738</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>distanceTransform32b()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>663</x>
+     <y>444</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>529</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>shellAddTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>669</x>
+     <y>558</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>590</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>shellMinusTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>676</x>
+     <y>611</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>670</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_17</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>adhesionTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>744</x>
+     <y>643</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>790</x>
+     <y>627</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_18</sender>
+   <signal>clicked()</signal>
+   <receiver>MAClass</receiver>
+   <slot>corrosionTransform()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>643</x>
+     <y>680</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>583</x>
+     <y>603</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>bmpInverse()</slot>
+  <slot>bmp256To32()</slot>
+  <slot>averageFilter()</slot>
+  <slot>midFilter()</slot>
+  <slot>distanceTransform()</slot>
+  <slot>barrierTransform()</slot>
+  <slot>getVoronoi()</slot>
+  <slot>getBuffer()</slot>
+  <slot>getDelauney()</slot>
+  <slot>distanceTransform32b()</slot>
+  <slot>shellAddTransform()</slot>
+  <slot>shellMinusTransform()</slot>
+  <slot>adhesionTransform()</slot>
+  <slot>corrosionTransform()</slot>
+ </slots>
+</ui>
